@@ -16,8 +16,14 @@
   <canvas id="overlay"></canvas>
   <div id="label">Waiting for gesture…</div>
 
-  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.5.0/dist/tf.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/hand-pose-detection@0.0.7/dist/hand-pose-detection.min.js"></script>
+<!-- Require the peer dependencies of hand-pose-detection. -->
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-core"></script>
+
+  <!-- You must explicitly require a TF.js backend if you're not using the TF.js union bundle. -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-backend-webgl"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/hand-pose-detection"></script>
   <script src="../src/app.js"></script>
 </body>
 </html>
