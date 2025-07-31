@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SignSpeak PoC</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; }
+    video, canvas { width: 640px; height: 480px; border: 1px solid #ccc; }
+    #label { font-size: 2rem; margin: .5rem; }
+  </style>
+</head>
+<body>
+  <h1>SignSpeak PoC (Browser)</h1>
+  <video id="video" autoplay muted playsinline></video>
+  <canvas id="overlay"></canvas>
+  <div id="label">Waiting for gesture…</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.5.0/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/hand-pose-detection@0.0.7/dist/hand-pose-detection.min.js"></script>
+  <script src="../src/app.js"></script>
+</body>
+</html>
